@@ -1,0 +1,187 @@
+{
+  "version": 1,
+  "series": "知识课程",
+  "speaker": "讲师",
+  "canvas": {
+    "width": 2560,
+    "height": 1440,
+    "fps": 60,
+    "samples_per_frame_at_48k": 800
+  },
+  "colors": {
+    "background": "#F5F7F5",
+    "paper": "#FFFFFF",
+    "ink": "#192523",
+    "muted": "#75817C",
+    "line": "#D6DEDA",
+    "accent": "#00877F",
+    "focus_fill": "#EAF5F1"
+  },
+  "font": {
+    "family": "Noto Sans CJK / Source Han Sans / system CJK",
+    "preferred_path": null,
+    "regular_index": 0,
+    "bold_index": 1,
+    "lesson_title_px": 62,
+    "section_title_px": 120,
+    "node_title_px": 40,
+    "body_px": 36,
+    "subtitle_px": 54
+  },
+  "layout": {
+    "title_top": 108,
+    "content_panel": [
+      410,
+      264,
+      2480,
+      1246
+    ],
+    "lecturer_circle": [
+      56,
+      945,
+      340
+    ],
+    "subtitle_band": [
+      0,
+      1280,
+      2560,
+      160
+    ],
+    "subtitle_center": [
+      1280,
+      1360
+    ]
+  },
+  "transitions": {
+    "frames": 78,
+    "duration_seconds": 1.3,
+    "lecturer_visible": false,
+    "subtitle_visible": false,
+    "lecturer_fade_before_frames": 18,
+    "lecturer_fade_after_frames": 18,
+    "background_crossfade_seconds": 0.6,
+    "presenter_guard_before_frames": 18,
+    "presenter_guard_after_frames": 18,
+    "lecturer_visible_during_guards": false,
+    "subtitle_visible_during_guards": false,
+    "guard_semantics": "The 78-frame core and both 18-frame guards must contain no lecturer or subtitles. Background content may fade in the guards. Any lecturer fade must finish before the preceding guard and begin only after the following guard.",
+    "legacy_fade_key_note": "lecturer_fade_before_frames/lecturer_fade_after_frames are retained for compatibility as guard lengths, not permission to show a fading lecturer inside the guards."
+  },
+  "audio": {
+    "sample_rate": 48000,
+    "channels": 2,
+    "music_max_gain": 0.07,
+    "speech_music_target_gain": 0.035,
+    "duck_attack_ms": 30,
+    "duck_release_ms": 900,
+    "duck_hold_ms": 150,
+    "loop_crossfade_seconds": 2,
+    "fade_in_seconds": 2,
+    "fade_out_seconds": 3,
+    "music_hard_gain_ceiling": 0.1,
+    "loudness": {
+      "target_integrated_lufs": -18.0,
+      "integrated_tolerance_lu": 0.5,
+      "narration_target_lufs": -18.0,
+      "narration_tolerance_lu": 0.5,
+      "final_true_peak_ceiling_dbtp": -1.0,
+      "narration_working_true_peak_ceiling_dbtp": -2.0,
+      "lra_review_range_lu": [
+        3.0,
+        6.0
+      ],
+      "recommendation": "Configurable speech-course target, not a measurement of any supplied lesson. Measure each actual final file."
+    },
+    "bgm_optional": true
+  },
+  "export": {
+    "video_bitrate": "28000k",
+    "video_maxrate": "40000k",
+    "gop_frames": 120,
+    "timebase": 15360,
+    "pixel_format": "yuv420p",
+    "audio_codec": "aac",
+    "audio_bitrate": "256k",
+    "faststart": true,
+    "video_codec": "libx264",
+    "video_preset": "medium",
+    "video_crf": 18
+  },
+  "coordinate_units": {
+    "canvas": "native pixels at 2560x1440",
+    "rectangles": "[left, top, right, bottom] (xyxy)",
+    "lecturer_circle": "[left, top, diameter]",
+    "subtitle_band": "[left, top, width, height] (xywh)"
+  },
+  "mode_profiles": {
+    "theory": "theory",
+    "practical": "practical",
+    "mixed": "practical"
+  },
+  "profiles": {
+    "theory": {
+      "layout": {
+        "title_top": 108,
+        "content_panel": [
+          410,
+          264,
+          2480,
+          1246
+        ],
+        "lecturer_circle": [
+          56,
+          945,
+          340
+        ],
+        "subtitle_band": [
+          0,
+          1280,
+          2560,
+          160
+        ],
+        "subtitle_center": [
+          1280,
+          1360
+        ]
+      }
+    },
+    "practical": {
+      "layout": {
+        "title_top": 108,
+        "content_panel": [
+          56,
+          264,
+          2128,
+          1272
+        ],
+        "operation_view": [
+          56,
+          180,
+          2128,
+          1272
+        ],
+        "lecturer_circle": [
+          2164,
+          945,
+          340
+        ],
+        "subtitle_band": [
+          0,
+          1280,
+          2560,
+          160
+        ],
+        "subtitle_center": [
+          1280,
+          1360
+        ]
+      },
+      "operation_defaults": {
+        "framing": "stable_large_context",
+        "zoom": "only_for_a_specific_unreadable_control",
+        "annotation": "only_when_needed_for_current_instruction",
+        "presenter_visible": true
+      }
+    }
+  }
+}

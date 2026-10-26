@@ -1,0 +1,44 @@
+{
+  "schema": "course-post-production.demo-assets.v1",
+  "purpose": "Static synthetic layout examples for the README. Not actual course footage, source recordings or evidence of completed full-video production.",
+  "presenter": {
+    "file": "assets/demo-presenter.png",
+    "fictional": true,
+    "method": "OpenAI built-in imagegen tool; new image generation without reference images",
+    "width": 1672,
+    "height": 940,
+    "sha256": "f721605f2b41d743b3abf5720d92f070071578854667730e66c27f955811b175",
+    "reference_images": [],
+    "prompt": "Use case: photorealistic-natural\nAsset type: a fictional presenter photo used only inside static educational layout examples for an open-source course post-production skill README.\nPrimary request: A completely fictional adult East Asian female educator in her thirties, warm and professional, looking directly into the camera as if naturally explaining something, with a subtle relaxed hand gesture. She is wearing a dark navy or charcoal shirt or tailored jacket. Loose medium shot from the waist up; include her entire head, hair and both shoulders with comfortable margins, not touching the image edges. Her face is centered horizontally and positioned in the upper-middle part of the frame.\nScene/backdrop: clean modern light-gray study or recording room, a few simple shelves and restrained teal accents, quiet uncluttered background.\nStyle/medium: polished photorealistic studio photography, natural human proportions and skin texture, even soft light, friendly calm teaching mood.\nComposition/framing: landscape 16:9, waist-up roomy framing, full head and shoulders visible. No on-screen course panels or typography.\nConstraints: This must be a newly invented person, not a real person or celebrity, and must not resemble or reference any supplied image. No text, logos, icons or watermark. Opaque background. One person only."
+  },
+  "gallery": {
+    "source": "examples/gallery.html",
+    "renderer": "examples/render_gallery.py",
+    "method": "Local Chrome headless screenshots, GPU disabled, CSS composition and fictional interface content",
+    "width": 2560,
+    "height": 1440,
+    "scenes": [
+      "presenter",
+      "diagram",
+      "practice",
+      "prompt",
+      "montage",
+      "playback"
+    ],
+    "outputs": [
+      "assets/examples/presenter.png",
+      "assets/examples/diagram.png",
+      "assets/examples/practice.png",
+      "assets/examples/prompt.png",
+      "assets/examples/montage.png",
+      "assets/examples/playback.png"
+    ],
+    "prompt_source": "examples/sample-prompt.txt",
+    "notes": [
+      "All teaching labels and interface data are fictional.",
+      "The montage screenshot is a static shot-arrangement illustration, not an animated video.",
+      "The playback example contains only its own synthetic source graphics and labels; it has no lecturer or course side panel.",
+      "Actual production must use authorized source footage and synchronized presenter video; the fictional portrait is only a documentation example."
+    ]
+  }
+}

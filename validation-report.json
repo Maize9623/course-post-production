@@ -1,0 +1,113 @@
+{
+  "status": "PASS_SCOPED_LOCAL_SYNTHETIC_AND_PACKAGE_VALIDATION",
+  "validated_on": "2026-10-26",
+  "environment": {
+    "os": "macOS 27.0.1",
+    "kernel": "Darwin 27.0.0",
+    "architecture": "arm64",
+    "python": "3.12.14",
+    "pillow": "12.3.0",
+    "numpy": "2.3.5",
+    "ffmpeg": "8.1.2",
+    "ffprobe": "8.1.2"
+  },
+  "execution": "Local CPU-only synthetic fixtures and documentation screenshots; no real course footage or personal images used. The fictional presenter image was newly generated without image references.",
+  "test_suites": [
+    {
+      "command": "python3 -B scripts/project.py self-test",
+      "result": "PASS",
+      "cases": 21,
+      "scope": "Read-only source registration, recursive role-compatible inputs, omitted BGM, de-duplication, project protection and structure audit."
+    },
+    {
+      "command": "python3 -B scripts/timeline.py --selftest",
+      "result": "PASS",
+      "cases": 10,
+      "scope": "Integer-frame edit maps, caption mapping, source protection and PCM editing invariants."
+    },
+    {
+      "command": "python3 -B -m unittest discover -s scripts -p 'test_*.py' -v",
+      "result": "OK",
+      "cases": 14,
+      "scope": "Nine narration-level and five audio-mix unit tests."
+    },
+    {
+      "command": "python3 -B scripts/verify_media.py --self-test",
+      "result": "PASS",
+      "cases": 16,
+      "scope": "Valid and invalid synthetic final media, complete strict audio/video decoding, exact AAC presentation samples and rejection of a 32-sample short audio track."
+    }
+  ],
+  "additional_checks": [
+    {
+      "check": "Python AST and style JSON parsing",
+      "result": "PASS",
+      "scope": "All eight core Python scripts, the optional gallery renderer and all packaged JSON files."
+    },
+    {
+      "check": "CJK rendering and explicit-font validation",
+      "result": "PASS",
+      "scope": "Synthetic Chinese cover, subtitle, first/last opaque chapter frames; English with Latin font succeeds, missing CJK glyphs are rejected."
+    },
+    {
+      "check": "README example layers",
+      "result": "PASS",
+      "commands": [
+        "python3 -B scripts/render_brand.py --cover --title '把知识讲清楚' --subtitle '概念 · 实操 · 验证' --speaker '讲师' --series '示例课程' --out assets/cover-preview.png",
+        "python3 -B scripts/render_brand.py --diagram assets/diagram-practical-example.json --profile practical --highlight verify --out assets/diagram-preview.png"
+      ],
+      "scope": "Actual 2560x1440 RGB cover and diagram layer outputs viewed, with fictional teaching labels and no presenter footage."
+    },
+    {
+      "check": "Skill Creator quick_validate",
+      "result": "PASS",
+      "scope": "Frontmatter, naming and scaffold validation; not semantic or media quality approval."
+    },
+    {
+      "check": "Relative Markdown links, anchors and gallery HTML assets",
+      "result": "PASS",
+      "scope": "All local Markdown references and gallery HTML image references resolve; ZIP integrity and member SHA are checked separately before distribution."
+    },
+    {
+      "check": "Private information and course-history scan",
+      "result": "PASS",
+      "scope": "No personal paths, original course titles, named tracks, original speaker identity, historic revision markers or real-source media in the distributable."
+    },
+    {
+      "check": "Independent first-use documentation review",
+      "result": "PASS_AFTER_CORRECTION",
+      "scope": "Checked material-driven production, layout-only revisions, cleanup authorization and CLI consistency; fixed script invocation paths in the tool reference."
+    },
+    {
+      "check": "Synthetic README screenshot gallery",
+      "result": "PASS_AFTER_CONTRAST_CORRECTION",
+      "command": "python3 -B examples/render_gallery.py",
+      "scope": "Six actual 2560x1440 Chrome headless screenshots rendered with GPU disabled and individually viewed: full-frame presenter, diagram, practice, prompt, montage arrangement and full playback. Lecturer, subtitles and content were checked for occlusion. Dark playback text was corrected to light text and the affected scene re-rendered and viewed.",
+      "asset_provenance": "examples/demo-assets.json",
+      "limitations": "Static fictional layout demonstrations only. They do not validate motion, lip synchronization, speech, real operation results or a completed course video."
+    },
+    {
+      "check": "Independent screenshot documentation review",
+      "result": "PASS",
+      "scope": "A second agent independently viewed the diagram, practice and prompt PNGs, checked their content, lecturer/subtitle clearance, continuous prompt source, fictional labels and optional gallery renderer documentation. No core or media tests were rerun for documentation-only changes."
+    },
+    {
+      "check": "Narration recording and retake documentation",
+      "result": "PASS_SCOPED_DOCUMENTATION_REVIEW",
+      "scope": "Expanded creator-facing instructions for continuous recording, explicit retake scope, complete-sentence re-recording, valid take selection, intentional teaching repetition, actual synchronized editing and cut review. README and SKILL links point to the detailed narration reference. An independent first-use review informed this change. No new speech-recognition capability, audio fixture or full-course media review is claimed; core scripts are unchanged."
+    },
+    {
+      "check": "Default final-file review and repair policy",
+      "result": "PASS_SCOPED_DOCUMENTATION_REVIEW",
+      "scope": "Clarified mandatory agent-led final-file review without a second user request, full subtitle text verification, actual-audio checks, edit and retake joins, chapter/playback boundaries, repair and re-export review, and blocking formal approval for unresolved major defects. Technical helper scope remains explicitly separate from speech semantics, OCR, viewing and listening. Independent review informed the distinction. This is a workflow documentation update; no new automatic speech/OCR inspection engine or newly reviewed course media is claimed."
+    }
+  ],
+  "limitations": [
+    "This validation covers local synthetic fixtures and package structure, not a newly produced full-length course or commercial teaching outcome.",
+    "Only the listed macOS arm64 environment was executed. Linux, Windows and other versions are not validated platforms.",
+    "The bundled tools target 2560x1440 at 60 fps with 48000 Hz stereo. Other output standards require adapted tools and renewed validation.",
+    "ASR, speech comprehension, person segmentation and semantic editing depend on the agent environment; the package does not ship these models or external service credentials.",
+    "render_brand.py --project-style applies to diagram mode. Other artwork modes expose their documented series/speaker/font parameters.",
+    "mix_audio.py requires a BGM source. A no-BGM course uses the calibrated narration master directly."
+  ]
+}

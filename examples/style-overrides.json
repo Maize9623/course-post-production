@@ -1,0 +1,12 @@
+{
+  "audio": {
+    "music_max_gain": 0.06,
+    "speech_music_target_gain": 0.03,
+    "loudness": {
+      "target_integrated_lufs": -18.0,
+      "narration_target_lufs": -18.0,
+      "integrated_tolerance_lu": 0.5,
+      "final_true_peak_ceiling_dbtp": -1.0
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+ "layout":"explicit",
+ "title":"先明确目标，再执行和验证",
+ "nodes":[
+  {"id":"goal","x":530,"y":560,"w":480,"h":200,"label":"明确目标","detail":"结果和验收标准","font_size":40},
+  {"id":"execute","x":1200,"y":560,"w":480,"h":200,"label":"执行操作","detail":"只突出关键动作","font_size":40},
+  {"id":"verify","x":1870,"y":560,"w":480,"h":200,"label":"验证结果","detail":"观察真实成果","font_size":40}
+ ],
+ "edges":[
+  {"id":"goal-execute","from":"goal","to":"execute","from_anchor":"right","to_anchor":"left","kind":"arrow"},
+  {"id":"execute-verify","from":"execute","to":"verify","from_anchor":"right","to_anchor":"left","kind":"arrow"}
+ ]
+}
